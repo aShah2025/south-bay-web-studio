@@ -1,21 +1,21 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Demos from "@/components/Demos";
+import Hero from "@/components/home/Hero";
+import Marquee from "@/components/home/Marquee";
+import Features from "@/components/home/Features";
+import Demos from "@/components/home/Demos";
+import Process from "@/components/home/Process";
 import Pricing from "@/components/Pricing";
-import ContactForm from "@/components/ContactForm";
-import Footer from "@/components/Footer";
+import CTABand from "@/components/CTABand";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <main>
-        <Hero />
-        <Demos />
-        <Pricing />
-        <ContactForm />
-      </main>
-      <Footer />
+      <Hero />
+      <Marquee />
+      <Features />
+      <Demos />
+      <Process />
+      <Pricing />
+      <CTABand />
     </>
   );
 }
