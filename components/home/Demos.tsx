@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { DEMOS } from "@/lib/site";
+import { DEMOS, hostOf } from "@/lib/site";
 import BrowserMock from "../BrowserMock";
 import Reveal from "../Reveal";
 import Spotlight from "../Spotlight";
@@ -12,6 +12,7 @@ export default function Demos() {
           <p className="eyebrow mx-auto">Live demos</p>
           <h2 className="mt-5 text-3xl font-extrabold tracking-tight sm:text-5xl">See it before you buy it</h2>
           <p className="mt-4 text-slate-600">Three live demo sites, one for each tier. Click through on your phone or desktop.</p>
+          <p className="mt-2 text-sm font-medium text-amber-700">All three are fictional sample businesses, built to show what we can do.</p>
         </Reveal>
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {DEMOS.map((d, i) => (
@@ -24,11 +25,12 @@ export default function Demos() {
                   className="group flex h-full flex-col focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
                 >
                   <div className={`relative bg-gradient-to-br ${d.accent} p-5`}>
-                    <BrowserMock level={(i + 1) as 1 | 2 | 3} accent={d.accent} url={d.name.toLowerCase().replace(/\s+/g, "-") + ".com"} className="transition group-hover:scale-[1.03]" />
+                    <BrowserMock level={(i + 1) as 1 | 2 | 3} accent={d.accent} url={hostOf(d.url)} className="transition group-hover:scale-[1.03]" />
                     <span className="absolute right-7 top-7 rounded-full bg-slate-900/85 px-2.5 py-1 text-xs font-semibold text-white">{d.price} Demo</span>
                   </div>
                   <div className="flex flex-1 flex-col p-6">
                     <p className="text-xs font-semibold uppercase tracking-wider text-blue-600">{d.tier} · {d.type}</p>
+                    <span className="mt-2 inline-flex w-fit rounded-full border border-amber-200 bg-amber-50 px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide text-amber-700">Sample business · Not real</span>
                     <h3 className="mt-2 text-xl font-bold">{d.name}</h3>
                     <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">{d.blurb}</p>
                     <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-blue-600">

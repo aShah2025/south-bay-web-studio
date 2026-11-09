@@ -27,7 +27,7 @@ export const DEMOS: Demo[] = [
     name: "Almaden Mobile Detailing",
     type: "1-Page Landing Site",
     blurb: "A fast, scroll-friendly landing page with click-to-call and service hours.",
-    url: "https://demo-starter.example.com",
+    url: "https://almaden-mobile-auto-detailing.vercel.app",
     accent: "from-sky-400 to-blue-600",
   },
   {
@@ -36,7 +36,7 @@ export const DEMOS: Demo[] = [
     name: "Willow Glen Family Plumbing",
     type: "3-Page Site",
     blurb: "Home, About and Contact with a working lead form and local SEO.",
-    url: "https://demo-growth.example.com",
+    url: "https://willowglenfamilyplumbing.vercel.app",
     accent: "from-blue-500 to-indigo-600",
   },
   {
@@ -45,7 +45,7 @@ export const DEMOS: Demo[] = [
     name: "Silicon Valley Elite Tutoring",
     type: "5-Page Site + Booking",
     blurb: "Full multi-page site with embedded online booking and reviews.",
-    url: "https://demo-pro.example.com",
+    url: "https://silicon-valley-elite-tutoring.vercel.app",
     accent: "from-indigo-500 to-violet-600",
   },
 ];
@@ -98,3 +98,6 @@ export const PLANS: Plan[] = [
     ],
   },
 ];
+
+// Display-friendly hostname for a demo URL, e.g. "almaden-mobile-auto-detailing.vercel.app"
+export const hostOf = (url: string) => url.replace(/^https?:\/\//, "").replace(/\/$/, "");

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DEMOS } from "@/lib/site";
+import { DEMOS, hostOf } from "@/lib/site";
 import PageHeader from "@/components/PageHeader";
 import BrowserMock from "@/components/BrowserMock";
 import Reveal from "@/components/Reveal";
@@ -22,7 +22,7 @@ export default function WorkPage() {
       <PageHeader
         eyebrow="Live demos"
         title={<>Real sites. <span className="gradient-text">Real results.</span></>}
-        subtitle="One live demo for every tier. Open them on your phone and see exactly what your business could look like."
+        subtitle="One live demo for every tier. These are fictional sample businesses, built so you can see exactly what your business could look like."
       />
       <section className="pb-20 sm:pb-28">
         <div className="mx-auto max-w-6xl space-y-20 px-4 sm:space-y-28 sm:px-6">
@@ -31,13 +31,14 @@ export default function WorkPage() {
               <Reveal className={i % 2 ? "lg:order-2" : ""}>
                 <a href={d.url} target="_blank" rel="noopener noreferrer" className="group block" aria-label={`Open ${d.name} demo (opens in a new tab)`}>
                   <div className={`relative rounded-3xl bg-gradient-to-br ${d.accent} p-6 sm:p-10`}>
-                    <BrowserMock level={(i + 1) as 1 | 2 | 3} accent={d.accent} url={d.name.toLowerCase().replace(/\s+/g, "-") + ".com"} className="transition duration-500 group-hover:-translate-y-2 group-hover:rotate-1" />
+                    <BrowserMock level={(i + 1) as 1 | 2 | 3} accent={d.accent} url={hostOf(d.url)} className="transition duration-500 group-hover:-translate-y-2 group-hover:rotate-1" />
                     <span className="absolute right-4 top-4 rounded-full bg-slate-900/85 px-3 py-1 text-xs font-semibold text-white sm:right-6 sm:top-6">{d.price} Demo</span>
                   </div>
                 </a>
               </Reveal>
               <Reveal delay={120}>
                 <p className="eyebrow">{d.tier} · {d.type}</p>
+                <p className="mt-3 inline-flex rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-bold uppercase tracking-wide text-amber-700">Sample business · Not a real company</p>
                 <h2 className="mt-5 text-3xl font-extrabold tracking-tight sm:text-4xl">{d.name}</h2>
                 <p className="mt-4 leading-relaxed text-slate-600">{d.blurb}</p>
                 <ul className="mt-6 grid gap-3 sm:grid-cols-2">
