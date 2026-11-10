@@ -13,7 +13,7 @@ export default function Logo() {
         />
       </svg>
       <span className="text-base sm:text-lg">
-        South Bay <span className="text-blue-600">Web Studio</span>
+        South Bay <span className="text-blue-600">Web Studios</span>
       </span>
     </span>
   );

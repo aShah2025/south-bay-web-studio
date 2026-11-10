@@ -14,6 +14,11 @@ export default function ContactForm() {
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
+    if (SITE.web3formsKey.startsWith("YOUR_")) {
+      // No access key configured at build time: don't pretend to send.
+      setStatus("error");
+      return;
+    }
     setStatus("sending");
     try {
       const data = new FormData(form);

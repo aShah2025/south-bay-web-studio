@@ -13,6 +13,7 @@ const display = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://southbayweb.vercel.app"),
   title: {
     default: "South Bay Web Studio | Web Design for San Jose Small Businesses",
     template: "%s | South Bay Web Studio",
