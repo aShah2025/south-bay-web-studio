@@ -17,7 +17,8 @@ export type Demo = {
   type: string;
   blurb: string;
   url: string; // swap these placeholder URLs for your live demos
-  accent: string; // tailwind gradient classes for the preview thumbnail
+  shot: string; // key for /public/demos/<shot>-desktop.jpg and -mobile.jpg
+  accent: string;
 };
 
 export const DEMOS: Demo[] = [
@@ -28,6 +29,7 @@ export const DEMOS: Demo[] = [
     type: "1-Page Landing Site",
     blurb: "A fast, scroll-friendly landing page with click-to-call and service hours.",
     url: "https://almaden-mobile-auto-detailing.vercel.app",
+    shot: "almaden",
     accent: "from-sky-400 to-blue-600",
   },
   {
@@ -37,6 +39,7 @@ export const DEMOS: Demo[] = [
     type: "3-Page Site",
     blurb: "Home, About and Contact with a working lead form and local SEO.",
     url: "https://willowglenfamilyplumbing.vercel.app",
+    shot: "willowglen",
     accent: "from-blue-500 to-indigo-600",
   },
   {
@@ -46,6 +49,7 @@ export const DEMOS: Demo[] = [
     type: "5-Page Site + Booking",
     blurb: "Full multi-page site with embedded online booking and reviews.",
     url: "https://silicon-valley-elite-tutoring.vercel.app",
+    shot: "silicon",
     accent: "from-indigo-500 to-violet-600",
   },
 ];
@@ -54,6 +58,7 @@ export type Plan = {
   name: string;
   price: string;
   tagline: string;
+  bestFor: string;
   delivery: string;
   inherits?: string;
   features: string[];
@@ -65,6 +70,7 @@ export const PLANS: Plan[] = [
     name: "Starter",
     price: "$300",
     tagline: "Get online fast.",
+    bestFor: "A single service, or a new business that just needs to be found and called.",
     delivery: "Delivered in 2 Weeks",
     features: [
       "1-page mobile-responsive site",
@@ -78,6 +84,7 @@ export const PLANS: Plan[] = [
     name: "Growth",
     price: "$500",
     tagline: "Win more local customers.",
+    bestFor: "Businesses ready to collect leads and show up in local San Jose searches.",
     delivery: "Delivered in 3 Weeks",
     inherits: "Everything in Starter, plus:",
     popular: true,
@@ -92,6 +99,7 @@ export const PLANS: Plan[] = [
     name: "Pro",
     price: "$800",
     tagline: "A complete booking machine.",
+    bestFor: "Businesses that take bookings and rely on reviews to win trust.",
     delivery: "Delivered in 4 Weeks",
     inherits: "Everything in Growth, plus:",
     features: [

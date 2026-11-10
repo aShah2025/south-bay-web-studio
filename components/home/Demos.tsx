@@ -1,50 +1,52 @@
 import Link from "next/link";
 import { DEMOS, hostOf } from "@/lib/site";
-import BrowserMock from "../BrowserMock";
-import Reveal from "../Reveal";
-import Spotlight from "../Spotlight";
 
 export default function Demos() {
   return (
-    <section className="bg-slate-50 py-20 sm:py-28">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="eyebrow mx-auto">Live demos</p>
-          <h2 className="mt-5 text-3xl font-extrabold tracking-tight sm:text-5xl">See it before you buy it</h2>
-          <p className="mt-4 text-slate-600">Three live demo sites, one for each tier. Click through on your phone or desktop.</p>
-          <p className="mt-2 text-sm font-medium text-amber-700">All three are fictional sample businesses, built to show what we can do.</p>
-        </Reveal>
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
-          {DEMOS.map((d, i) => (
-            <Reveal key={d.name} delay={i * 100} className="h-full">
-              <Spotlight className="glass h-full transition hover:-translate-y-1 hover:shadow-2xl">
-                <a
-                  href={d.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex h-full flex-col focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
-                >
-                  <div className={`relative bg-gradient-to-br ${d.accent} p-5`}>
-                    <BrowserMock level={(i + 1) as 1 | 2 | 3} accent={d.accent} url={hostOf(d.url)} className="transition group-hover:scale-[1.03]" />
-                    <span className="absolute right-7 top-7 rounded-full bg-slate-900/85 px-2.5 py-1 text-xs font-semibold text-white">{d.price} Demo</span>
-                  </div>
-                  <div className="flex flex-1 flex-col p-6">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-blue-600">{d.tier} · {d.type}</p>
-                    <span className="mt-2 inline-flex w-fit rounded-full border border-amber-200 bg-amber-50 px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide text-amber-700">Sample business · Not real</span>
-                    <h3 className="mt-2 text-xl font-bold">{d.name}</h3>
-                    <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">{d.blurb}</p>
-                    <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-blue-600">
-                      View live demo <span aria-hidden="true" className="transition group-hover:translate-x-1">→</span>
-                      <span className="sr-only"> (opens in a new tab)</span>
-                    </span>
-                  </div>
-                </a>
-              </Spotlight>
-            </Reveal>
+    <section className="section">
+      <div className="container-x">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl sm:text-4xl">See real sites before you buy</h2>
+          <p className="mt-4 text-lg text-slate-600">
+            One live demo for each plan. They&apos;re fictional sample businesses, built so you can see what yours could look like.
+          </p>
+        </div>
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {DEMOS.map((d) => (
+            <a
+              key={d.name}
+              href={d.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card group flex flex-col overflow-hidden transition hover:-translate-y-1 hover:shadow-lg"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`/demos/${d.shot}-desktop.jpg`}
+                alt={`Screenshot of the ${d.name} sample website`}
+                width={1280}
+                height={800}
+                loading="lazy"
+                className="aspect-[16/10] w-full border-b border-slate-200 object-cover object-top"
+              />
+              <div className="flex flex-1 flex-col p-6">
+                <div className="flex items-center justify-between gap-3">
+                  <p className="text-sm font-semibold text-blue-600">{d.tier} · {d.price}</p>
+                  <span className="tag-sample">Sample business</span>
+                </div>
+                <h3 className="mt-3 text-xl">{d.name}</h3>
+                <p className="mt-1 text-sm text-slate-500">{d.type}</p>
+                <p className="mt-3 flex-1 text-[15px] text-slate-600">{d.blurb}</p>
+                <span className="mt-5 text-[15px] font-semibold text-blue-600 group-hover:underline">
+                  Open live demo →<span className="sr-only"> (opens in a new tab)</span>
+                </span>
+                <span className="sr-only">{hostOf(d.url)}</span>
+              </div>
+            </a>
           ))}
         </div>
         <div className="mt-10 text-center">
-          <Link href="/work/" className="btn-secondary">Explore all work</Link>
+          <Link href="/work/" className="btn-secondary">See all work</Link>
         </div>
       </div>
     </section>

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
-import Reveal from "@/components/Reveal";
 import Comparison from "@/components/Comparison";
 import CTABand from "@/components/CTABand";
 
@@ -41,16 +40,16 @@ export default function PricingPage() {
     <>
       <PageHeader
         eyebrow="Transparent pricing"
-        title={<>One price. <span className="gradient-text">No surprises.</span></>}
+        title={<>One price. No surprises.</>}
         subtitle="Starter, Growth or Pro. Pay once for your site. Hosting is included, and your domain name is the only yearly cost."
       />
       <Comparison />
       <Pricing heading={false} />
-      <section className="pb-20 sm:pb-28">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6">
-          <Reveal>
-            <h2 className="text-center text-3xl font-extrabold tracking-tight sm:text-4xl">Compare plans</h2>
-            <div className="glass mt-10 overflow-x-auto">
+      <section className="section pt-0 sm:pt-0">
+        <div className="container-x max-w-4xl">
+          <div>
+            <h2 className="text-center text-3xl sm:text-4xl">Compare plans</h2>
+            <div className="card mt-10 overflow-x-auto">
               <table className="w-full min-w-[560px] text-left text-sm">
                 <thead>
                   <tr className="border-b border-slate-200">
@@ -72,11 +71,11 @@ export default function PricingPage() {
                 </tbody>
               </table>
             </div>
-          </Reveal>
+          </div>
         </div>
       </section>
       <FAQ />
-      <div className="pt-20 sm:pt-28">
+      <div className="pt-16 sm:pt-24">
         <CTABand />
       </div>
     </>

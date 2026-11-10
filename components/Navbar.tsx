@@ -14,23 +14,17 @@ const LINKS = [
 export default function Navbar() {
   const pathname = (usePathname() ?? "/").replace(/\/$/, "") || "/";
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => setOpen(false), [pathname]);
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
   }, []);
 
   return (
-    <header
-      className={`sticky top-0 z-50 border-b bg-white/80 backdrop-blur-xl transition-shadow ${
-        scrolled ? "border-slate-200 shadow-sm" : "border-transparent"
-      }`}
-    >
-      <nav aria-label="Primary" className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
+      <nav aria-label="Primary" className="container-x flex h-16 items-center justify-between">
         <Link href="/" aria-label="South Bay Web Studios home">
           <Logo />
         </Link>
@@ -41,44 +35,44 @@ export default function Navbar() {
               key={l.href}
               href={`${l.href}/`}
               aria-current={pathname === l.href ? "page" : undefined}
-              className={`relative text-sm font-medium transition hover:text-slate-900 ${
-                pathname === l.href ? "text-slate-900" : "text-slate-600"
+              className={`text-[15px] font-medium transition hover:text-blue-600 ${
+                pathname === l.href ? "text-blue-600" : "text-slate-700"
               }`}
             >
               {l.label}
-              {pathname === l.href && <span className="absolute -bottom-1.5 left-0 h-0.5 w-full rounded bg-blue-600" />}
             </Link>
           ))}
-          <Link href="/contact/" className="btn-primary !px-5 !py-2">
+          <Link href="/contact/" className="btn-primary !min-h-10 !px-5 !py-2 !text-[15px]">
             Get a Free Preview
           </Link>
         </div>
 
         <button
           type="button"
-          className="-mr-2 rounded-lg p-2 md:hidden"
-          aria-label={open ? "Close menu" : "Open menu"}
+          className="-mr-2 inline-flex h-11 items-center gap-2 rounded-lg px-3 text-[15px] font-semibold md:hidden"
           aria-expanded={open}
+          aria-controls="mobile-menu"
           onClick={() => setOpen((o) => !o)}
         >
-          <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+          {open ? "Close" : "Menu"}
+          <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
             {open ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
           </svg>
         </button>
       </nav>
 
       {open && (
-        <div className="border-t border-slate-100 bg-white px-4 pb-6 pt-3 md:hidden">
-          <ul className="space-y-1">
+        <div id="mobile-menu" className="border-t border-slate-100 bg-white px-5 pb-6 pt-3 md:hidden">
+          <ul>
             {LINKS.map((l) => (
               <li key={l.href}>
-                <Link href={`${l.href}/`} className="block rounded-lg px-3 py-3 text-base font-medium hover:bg-slate-50">
+                <Link href={`${l.href}/`} className="flex min-h-12 items-center text-lg font-medium">
                   {l.label}
                 </Link>
               </li>
             ))}
           </ul>
-          <Link href="/contact/" className="btn-primary mt-4 w-full">
+          <Link href="/contact/" className="btn-primary mt-3 w-full">
             Get a Free Preview
           </Link>
         </div>

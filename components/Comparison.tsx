@@ -1,5 +1,3 @@
-import Reveal from "./Reveal";
-
 const ROWS = [
   { label: "Upfront cost", them: "$2,500 – $5,000+", us: "$300 – $800 one-time" },
   { label: "Hosting fees", them: "$50 – $150 / month", us: "Included, $0 / month" },
@@ -21,62 +19,44 @@ function Mark({ good }: { good: boolean }) {
 
 export default function Comparison() {
   return (
-    <section className="bg-slate-50 py-20 sm:py-28">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6">
-        <Reveal className="text-center">
-          <p className="eyebrow mx-auto">Why choose us</p>
-          <h2 className="mt-5 text-3xl font-extrabold tracking-tight sm:text-5xl">
-            Why Choose Us vs. Traditional Agencies
-          </h2>
-        </Reveal>
+    <section className="section bg-slate-50">
+      <div className="container-x max-w-4xl">
+        <div className="text-center">
+          <h2 className="text-3xl sm:text-4xl">Why Choose Us vs. Traditional Agencies</h2>
+        </div>
 
-        <Reveal delay={100}>
-          <div className="glass mt-12 overflow-hidden">
-            <table className="w-full table-fixed text-left text-sm sm:text-base">
-              <caption className="sr-only">Comparison of traditional agencies and South Bay Web Studios</caption>
-              <thead>
-                <tr className="border-b border-slate-200">
-                  <th scope="col" className="w-[26%] p-3 sm:p-5"><span className="sr-only">Feature</span></th>
-                  <th scope="col" className="p-3 text-center text-xs font-semibold text-slate-500 sm:p-5 sm:text-sm">
-                    Traditional Agencies
-                  </th>
-                  <th scope="col" className="bg-blue-600 p-3 text-center text-xs font-bold text-white sm:p-5 sm:text-sm">
-                    South Bay Web Studios
-                  </th>
+        <div className="card mt-12 overflow-hidden">
+          <table className="w-full table-fixed text-left text-sm sm:text-base">
+            <caption className="sr-only">Comparison of traditional agencies and South Bay Web Studios</caption>
+            <thead>
+              <tr className="border-b border-slate-200">
+                <th scope="col" className="w-[26%] p-3 sm:p-5"><span className="sr-only">Feature</span></th>
+                <th scope="col" className="p-3 text-center text-xs font-semibold text-slate-500 sm:p-5 sm:text-sm">Traditional Agencies</th>
+                <th scope="col" className="bg-blue-600 p-3 text-center text-xs font-bold text-white sm:p-5 sm:text-sm">South Bay Web Studios</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ROWS.map((r) => (
+                <tr key={r.label} className="border-b border-slate-100 last:border-0">
+                  <th scope="row" className="p-3 text-xs font-semibold text-slate-900 sm:p-5 sm:text-sm">{r.label}</th>
+                  <td className="p-3 sm:p-5">
+                    <span className="flex items-center justify-center gap-2 text-center text-slate-500"><Mark good={false} /><span>{r.them}</span></span>
+                  </td>
+                  <td className="bg-blue-50/70 p-3 sm:p-5">
+                    <span className="flex items-center justify-center gap-2 text-center font-semibold text-slate-900"><Mark good /><span>{r.us}</span></span>
+                  </td>
                 </tr>
-              </thead>
-              <tbody>
-                {ROWS.map((r) => (
-                  <tr key={r.label} className="border-b border-slate-100 last:border-0">
-                    <th scope="row" className="p-3 text-xs font-semibold text-slate-900 sm:p-5 sm:text-sm">{r.label}</th>
-                    <td className="p-3 sm:p-5">
-                      <span className="flex items-center justify-center gap-2 text-center text-slate-500">
-                        <Mark good={false} />
-                        <span>{r.them}</span>
-                      </span>
-                    </td>
-                    <td className="bg-blue-50/80 p-3 sm:p-5">
-                      <span className="flex items-center justify-center gap-2 text-center font-semibold text-slate-900">
-                        <Mark good />
-                        <span>{r.us}</span>
-                      </span>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </Reveal>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
-        <Reveal delay={150}>
-          <p className="mx-auto mt-8 max-w-2xl text-center text-sm leading-relaxed text-slate-600 sm:text-base">
-            <strong className="text-slate-900">How we keep prices low:</strong> we avoid bloated agency overhead and
-            pass those savings directly to San Jose small businesses.
-          </p>
-          <p className="mx-auto mt-3 max-w-2xl text-center text-xs text-slate-500 sm:text-sm">
-            A domain name (about $10 – $20 a year) is paid to a registrar with any website, from any provider.
-          </p>
-        </Reveal>
+        <p className="mx-auto mt-8 max-w-2xl text-center text-slate-600">
+          <strong className="text-slate-900">How we keep prices low:</strong> we avoid bloated agency overhead and pass those savings directly to San Jose small businesses.
+        </p>
+        <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-slate-500">
+          A domain name (about $10 – $20 a year) is paid to a registrar with any website, from any provider.
+        </p>
       </div>
     </section>
   );

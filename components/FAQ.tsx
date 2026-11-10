@@ -1,4 +1,3 @@
-import Reveal from "./Reveal";
 
 const ITEMS = [
   {
@@ -35,29 +34,27 @@ const ITEMS = [
   },
 ];
 
-export default function FAQ() {
+export default function FAQ({ limit }: { limit?: number }) {
+  const items = limit ? ITEMS.slice(0, limit) : ITEMS;
   return (
-    <section className="bg-slate-50 py-20 sm:py-28">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6">
-        <Reveal className="text-center">
-          <p className="eyebrow mx-auto">FAQ</p>
-          <h2 className="mt-5 text-3xl font-extrabold tracking-tight sm:text-4xl">Questions, answered</h2>
-        </Reveal>
+    <section className="section bg-slate-50">
+      <div className="container-x max-w-3xl">
+        <div className="text-center">
+          <h2 className="text-3xl sm:text-4xl">Questions, answered</h2>
+        </div>
         <div className="mt-12 space-y-3">
-          {ITEMS.map((it, i) => (
-            <Reveal key={it.q} delay={i * 50}>
-              <details className="glass group p-5 open:bg-white">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold">
-                  {it.q}
-                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-blue-50 text-blue-600 transition group-open:rotate-45">
-                    <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true">
-                      <path d="M12 5v14M5 12h14" />
-                    </svg>
-                  </span>
-                </summary>
-                <p className="mt-3 text-sm leading-relaxed text-slate-600">{it.a}</p>
-              </details>
-            </Reveal>
+          {items.map((it) => (
+            <details key={it.q} className="card group p-5 open:shadow-md">
+              <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 text-[17px] font-semibold">
+                {it.q}
+                <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-blue-50 text-blue-600 transition group-open:rotate-45" aria-hidden="true">
+                  <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                    <path d="M12 5v14M5 12h14" />
+                  </svg>
+                </span>
+              </summary>
+              <p className="mt-2 pb-1 text-[15px] text-slate-600">{it.a}</p>
+            </details>
           ))}
         </div>
       </div>

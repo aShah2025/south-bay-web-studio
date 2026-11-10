@@ -6,7 +6,7 @@ import { SITE } from "@/lib/site";
 type Status = "idle" | "sending" | "success" | "error";
 
 const inputClass =
-  "mt-1.5 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 transition focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600/30";
+  "mt-1.5 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-900 placeholder:text-slate-400 transition focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600/30";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -41,29 +41,29 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="glass space-y-5 p-6 sm:p-8">
+    <form onSubmit={onSubmit} className="card space-y-5 p-6 sm:p-8">
       {/* Honeypot for spam bots */}
       <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
 
       <div className="grid gap-5 sm:grid-cols-2">
-        <label className="block text-sm font-medium">
+        <label className="block text-[15px] font-semibold">
           Business Name
           <input name="business_name" required autoComplete="organization" className={inputClass} placeholder="Almaden Mobile Detailing" />
         </label>
-        <label className="block text-sm font-medium">
+        <label className="block text-[15px] font-semibold">
           Owner Name
           <input name="name" required autoComplete="name" className={inputClass} placeholder="Jane Doe" />
         </label>
-        <label className="block text-sm font-medium">
+        <label className="block text-[15px] font-semibold">
           Email
           <input name="email" type="email" required autoComplete="email" className={inputClass} placeholder="jane@example.com" />
         </label>
-        <label className="block text-sm font-medium">
+        <label className="block text-[15px] font-semibold">
           Phone
           <input name="phone" type="tel" required autoComplete="tel" className={inputClass} placeholder="(408) 555-0123" />
         </label>
       </div>
-      <label className="block text-sm font-medium">
+      <label className="block text-[15px] font-semibold">
         Current Website <span className="font-normal text-slate-500">(optional)</span>
         <input name="current_website" type="url" autoComplete="url" className={inputClass} placeholder="https://" />
       </label>
