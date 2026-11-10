@@ -36,9 +36,14 @@ export default function Pricing({ heading = true }: { heading?: boolean }) {
                   <span className="text-5xl font-extrabold tracking-tight">{p.price}</span>
                   <span className="text-sm font-medium text-slate-500">one-time</span>
                 </p>
-                <p className="mt-3 inline-flex w-fit items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
-                  <Icon name="shield" className="h-3.5 w-3.5" /> $0/month hosting fees
-                </p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <p className="inline-flex w-fit items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
+                    <Icon name="shield" className="h-3.5 w-3.5" /> $0/month hosting fees
+                  </p>
+                  <p className="inline-flex w-fit items-center gap-1.5 rounded-full bg-slate-900 px-3 py-1 text-xs font-semibold text-white">
+                    <Icon name="calendar" className="h-3.5 w-3.5" /> {p.delivery}
+                  </p>
+                </div>
                 {p.inherits && <p className="mt-6 text-sm font-semibold text-slate-900">{p.inherits}</p>}
                 <ul className={`${p.inherits ? "mt-3" : "mt-6"} flex-1 space-y-3 text-sm text-slate-700`}>
                   {p.features.map((f) => (

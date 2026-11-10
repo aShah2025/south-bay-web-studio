@@ -3,6 +3,7 @@ import Marquee from "@/components/home/Marquee";
 import Features from "@/components/home/Features";
 import Demos from "@/components/home/Demos";
 import Process from "@/components/home/Process";
+import Comparison from "@/components/Comparison";
 import Pricing from "@/components/Pricing";
 import CTABand from "@/components/CTABand";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <Features />
       <Demos />
       <Process />
+      <Comparison />
       <Pricing />
       <CTABand />
     </>

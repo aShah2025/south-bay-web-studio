@@ -19,7 +19,7 @@ export default function Hero() {
             Modern Websites for San Jose Small Businesses. <span className="gradient-text">Zero Monthly Fees.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-slate-600 lg:mx-0">
-            Get a fast, mobile-first website live in days, not months. Pay once, own it forever. No hosting fees, no retainers, no surprises.
+            Get a fast, mobile-first website live in weeks, not months. Pay once, own it forever. No hosting fees, no retainers, no surprises.
           </p>
           <div className="mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center lg:justify-start">
             <Link href="/contact/" className="btn-primary">Request Your Free Homepage Preview</Link>

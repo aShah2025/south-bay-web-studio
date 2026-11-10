@@ -54,6 +54,7 @@ export type Plan = {
   name: string;
   price: string;
   tagline: string;
+  delivery: string;
   inherits?: string;
   features: string[];
   popular?: boolean;
@@ -64,6 +65,7 @@ export const PLANS: Plan[] = [
     name: "Starter",
     price: "$300",
     tagline: "Get online fast.",
+    delivery: "Delivered in 2 Weeks",
     features: [
       "1-page mobile-responsive site",
       "Click-to-call button",
@@ -76,6 +78,7 @@ export const PLANS: Plan[] = [
     name: "Growth",
     price: "$500",
     tagline: "Win more local customers.",
+    delivery: "Delivered in 3 Weeks",
     inherits: "Everything in Starter, plus:",
     popular: true,
     features: [
@@ -89,6 +92,7 @@ export const PLANS: Plan[] = [
     name: "Pro",
     price: "$800",
     tagline: "A complete booking machine.",
+    delivery: "Delivered in 4 Weeks",
     inherits: "Everything in Growth, plus:",
     features: [
       "5 full pages (Home, About, Services/Pricing, Reviews/Gallery, Contact)",

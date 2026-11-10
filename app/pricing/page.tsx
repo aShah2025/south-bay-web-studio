@@ -3,6 +3,7 @@ import PageHeader from "@/components/PageHeader";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import Reveal from "@/components/Reveal";
+import Comparison from "@/components/Comparison";
 import CTABand from "@/components/CTABand";
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ const ROWS: [string, boolean | string, boolean | string, boolean | string][] = [
   ["Local San Jose SEO optimization", false, true, true],
   ["Embedded online booking widget", false, false, true],
   ["Google Reviews showcase", false, false, true],
+  ["Delivery time", "2 weeks", "3 weeks", "4 weeks"],
   ["Rounds of revisions", "1", "2", "2 + 30 days of free edits"],
 ];
 
@@ -42,6 +44,7 @@ export default function PricingPage() {
         title={<>One price. <span className="gradient-text">Zero monthly fees.</span></>}
         subtitle="Starter, Growth or Pro. Pay once and own your site. No hosting bills, ever."
       />
+      <Comparison />
       <Pricing heading={false} />
       <section className="pb-20 sm:pb-28">
         <div className="mx-auto max-w-4xl px-4 sm:px-6">

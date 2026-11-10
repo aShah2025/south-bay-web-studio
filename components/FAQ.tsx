@@ -7,7 +7,7 @@ const ITEMS = [
   },
   {
     q: "How long does it take?",
-    a: "We build quickly and focus on days, not months. Send us your details through the free preview form and we'll give you a realistic timeline for your tier.",
+    a: "Starter sites are delivered in 2 weeks, Growth in 3 weeks and Pro in 4 weeks. Traditional agencies typically take 6 to 10 weeks.",
   },
   {
     q: "Which plan should I choose?",
