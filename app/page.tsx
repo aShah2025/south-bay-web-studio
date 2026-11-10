@@ -1,6 +1,6 @@
 import Hero from "@/components/home/Hero";
-import Trades from "@/components/home/Trades";
-import FeatureTabs from "@/components/home/FeatureTabs";
+import Marquee from "@/components/home/Marquee";
+import Features from "@/components/home/Features";
 import Demos from "@/components/home/Demos";
 import Process from "@/components/home/Process";
 import Comparison from "@/components/Comparison";
@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Trades />
-      <FeatureTabs />
+      <Marquee />
+      <Features />
       <Demos />
       <Process />
       <Comparison />

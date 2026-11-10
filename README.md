@@ -19,9 +19,3 @@ npm run build    # static site in ./out
 ## Deploy
 
 `out/` is plain static HTML, deployable to Netlify, Cloudflare Pages, Vercel or GitHub Pages.
-
-## Design credits
-
-The illustrated redesign follows the MIT-licensed [rishithc](https://github.com/rishith-c/rishithc) design skill by Rishith Chennupati. The hero illustrations in `public/art/` are that repo's sample artwork. Fonts: Manrope and Instrument Serif (both open source, via Google Fonts).
-
-The previous blue/white design is saved as the git tag `v1-blue-design`.

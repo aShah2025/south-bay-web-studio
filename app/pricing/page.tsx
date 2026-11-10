@@ -28,11 +28,11 @@ const ROWS: [string, boolean | string, boolean | string, boolean | string][] = [
 function Cell({ v }: { v: boolean | string }) {
   if (v === true)
     return (
-      <svg className="mx-auto h-5 w-5 text-ink" viewBox="0 0 20 20" fill="currentColor" role="img" aria-label="Included">
+      <svg className="mx-auto h-5 w-5 text-blue-600" viewBox="0 0 20 20" fill="currentColor" role="img" aria-label="Included">
         <path fillRule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-7.5 7.5a1 1 0 01-1.4 0L3.3 9.7a1 1 0 011.4-1.4l3.8 3.8 6.8-6.8a1 1 0 011.4 0z" clipRule="evenodd" />
       </svg>
     );
-  if (v === false) return <span className="text-muted/50" aria-label="Not included">—</span>;
+  if (v === false) return <span className="text-slate-300" aria-label="Not included">—</span>;
   return <span className="text-sm font-semibold">{v}</span>;
 }
 
@@ -41,31 +41,31 @@ export default function PricingPage() {
     <>
       <PageHeader
         eyebrow="Transparent pricing"
-        title={<>One price. Zero monthly fees.</>}
+        title={<>One price. <span className="gradient-text">Zero monthly fees.</span></>}
         subtitle="Starter, Growth or Pro. Pay once and own your site. No hosting bills, ever."
       />
       <Comparison />
       <Pricing heading={false} />
       <section className="pb-20 sm:pb-28">
-        <div className="wrap max-w-4xl">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
           <Reveal>
-            <h2 className="text-center">Compare plans</h2>
-            <div className="panel mt-10 overflow-x-auto">
+            <h2 className="text-center text-3xl font-extrabold tracking-tight sm:text-4xl">Compare plans</h2>
+            <div className="glass mt-10 overflow-x-auto">
               <table className="w-full min-w-[560px] text-left text-sm">
                 <thead>
-                  <tr className="border-b border-line">
+                  <tr className="border-b border-slate-200">
                     <th scope="col" className="p-4 font-semibold">Feature</th>
-                    <th scope="col" className="p-4 text-center font-semibold">Starter<br /><span className="font-normal text-muted">$300</span></th>
-                    <th scope="col" className="bg-sand p-4 text-center font-semibold">Growth<br /><span className="font-normal text-muted">$500</span></th>
-                    <th scope="col" className="p-4 text-center font-semibold">Pro<br /><span className="font-normal text-muted">$800</span></th>
+                    <th scope="col" className="p-4 text-center font-semibold">Starter<br /><span className="text-blue-600">$300</span></th>
+                    <th scope="col" className="bg-blue-50/70 p-4 text-center font-semibold">Growth<br /><span className="text-blue-600">$500</span></th>
+                    <th scope="col" className="p-4 text-center font-semibold">Pro<br /><span className="text-blue-600">$800</span></th>
                   </tr>
                 </thead>
                 <tbody>
                   {ROWS.map(([label, a, b, c]) => (
-                    <tr key={label} className="border-b border-line last:border-0">
-                      <th scope="row" className="p-4 font-medium text-ink">{label}</th>
+                    <tr key={label} className="border-b border-slate-100 last:border-0">
+                      <th scope="row" className="p-4 font-medium text-slate-700">{label}</th>
                       <td className="p-4 text-center"><Cell v={a} /></td>
-                      <td className="bg-sand p-4 text-center"><Cell v={b} /></td>
+                      <td className="bg-blue-50/70 p-4 text-center"><Cell v={b} /></td>
                       <td className="p-4 text-center"><Cell v={c} /></td>
                     </tr>
                   ))}
@@ -76,7 +76,9 @@ export default function PricingPage() {
         </div>
       </section>
       <FAQ />
-      <CTABand />
+      <div className="pt-20 sm:pt-28">
+        <CTABand />
+      </div>
     </>
   );
 }

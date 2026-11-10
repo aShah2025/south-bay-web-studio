@@ -28,7 +28,7 @@ export const DEMOS: Demo[] = [
     type: "1-Page Landing Site",
     blurb: "A fast, scroll-friendly landing page with click-to-call and service hours.",
     url: "https://almaden-mobile-auto-detailing.vercel.app",
-    accent: "from-sky-200 to-sky-300",
+    accent: "from-sky-400 to-blue-600",
   },
   {
     tier: "Growth",
@@ -37,7 +37,7 @@ export const DEMOS: Demo[] = [
     type: "3-Page Site",
     blurb: "Home, About and Contact with a working lead form and local SEO.",
     url: "https://willowglenfamilyplumbing.vercel.app",
-    accent: "from-amber-200 to-amber-300",
+    accent: "from-blue-500 to-indigo-600",
   },
   {
     tier: "Pro",
@@ -46,7 +46,7 @@ export const DEMOS: Demo[] = [
     type: "5-Page Site + Booking",
     blurb: "Full multi-page site with embedded online booking and reviews.",
     url: "https://silicon-valley-elite-tutoring.vercel.app",
-    accent: "from-emerald-200 to-lime-300",
+    accent: "from-indigo-500 to-violet-600",
   },
 ];
 
