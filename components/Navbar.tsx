@@ -31,7 +31,7 @@ export default function Navbar() {
       }`}
     >
       <nav aria-label="Primary" className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link href="/" aria-label="South Bay Web Studio home">
+        <Link href="/" aria-label="South Bay Web Studios home">
           <Logo />
         </Link>
 

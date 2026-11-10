@@ -7,7 +7,7 @@ import CTABand from "@/components/CTABand";
 
 export const metadata: Metadata = {
   title: "Work",
-  description: "Live demo sites for each South Bay Web Studio tier: Starter, Growth and Pro.",
+  description: "Live demo sites for each South Bay Web Studios tier: Starter, Growth and Pro.",
 };
 
 const DETAILS: Record<string, string[]> = {

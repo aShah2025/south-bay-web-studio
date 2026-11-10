@@ -1,7 +1,7 @@
 // Central place to swap demo URLs, form keys and contact details.
 
 export const SITE = {
-  name: "South Bay Web Studio",
+  name: "South Bay Web Studios",
   location: "San Jose, CA",
   email: "hello@southbaywebstudio.com",
   // Web3Forms: https://web3forms.com. Set NEXT_PUBLIC_WEB3FORMS_KEY in your environment.

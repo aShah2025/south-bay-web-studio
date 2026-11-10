@@ -16,7 +16,7 @@ export default function Features() {
     <section className="py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="eyebrow mx-auto">Why South Bay Web Studio</p>
+          <p className="eyebrow mx-auto">Why South Bay Web Studios</p>
           <h2 className="mt-5 text-3xl font-extrabold tracking-tight sm:text-5xl">Everything your business needs. Nothing it doesn&apos;t.</h2>
         </Reveal>
         <div className="mt-14 grid gap-4 md:grid-cols-4">

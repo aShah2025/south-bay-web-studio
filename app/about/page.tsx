@@ -7,7 +7,7 @@ import CTABand from "@/components/CTABand";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "South Bay Web Studio is a local San Jose web design studio building fast, fair-priced websites for small businesses.",
+  description: "South Bay Web Studios is a local San Jose web design studio building fast, fair-priced websites for small businesses.",
 };
 
 const VALUES: { icon: IconName; title: string; body: string }[] = [
@@ -27,7 +27,7 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About the studio"
         title={<>A local studio for <span className="gradient-text">local businesses.</span></>}
-        subtitle="South Bay Web Studio builds fast, beautiful websites for San Jose small businesses, without the monthly bill."
+        subtitle="South Bay Web Studios builds fast, beautiful websites for San Jose small businesses, without the monthly bill."
       />
 
       <section className="pb-20 sm:pb-28">

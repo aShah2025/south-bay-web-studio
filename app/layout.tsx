@@ -15,13 +15,13 @@ const display = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://southbayweb.vercel.app"),
   title: {
-    default: "South Bay Web Studio | Web Design for San Jose Small Businesses",
-    template: "%s | South Bay Web Studio",
+    default: "South Bay Web Studios | Web Design for San Jose Small Businesses",
+    template: "%s | South Bay Web Studios",
   },
   description:
     "Modern, mobile-first websites for San Jose small businesses. Fast turnaround, one-time pricing from $300, zero monthly fees.",
   openGraph: {
-    title: "South Bay Web Studio",
+    title: "South Bay Web Studios",
     description: "Modern websites for San Jose small businesses. Zero monthly fees.",
     type: "website",
     locale: "en_US",
