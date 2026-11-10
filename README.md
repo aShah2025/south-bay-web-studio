@@ -1,4 +1,4 @@
-# South Bay Web Studio
+# South Bay Web Studios
 
 Marketing site for a San Jose, CA web design studio. Next.js (App Router, static export) + Tailwind CSS.
 
