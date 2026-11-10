@@ -8,7 +8,7 @@ import CTABand from "@/components/CTABand";
 
 export const metadata: Metadata = {
   title: "Pricing",
-  description: "One-time website pricing from $300. Zero monthly hosting fees on every plan.",
+  description: "One-time website pricing from $300. Hosting included on every plan.",
 };
 
 const ROWS: [string, boolean | string, boolean | string, boolean | string][] = [
@@ -41,8 +41,8 @@ export default function PricingPage() {
     <>
       <PageHeader
         eyebrow="Transparent pricing"
-        title={<>One price. <span className="gradient-text">Zero monthly fees.</span></>}
-        subtitle="Starter, Growth or Pro. Pay once and own your site. No hosting bills, ever."
+        title={<>One price. <span className="gradient-text">No surprises.</span></>}
+        subtitle="Starter, Growth or Pro. Pay once for your site. Hosting is included, and your domain name is the only yearly cost."
       />
       <Comparison />
       <Pricing heading={false} />

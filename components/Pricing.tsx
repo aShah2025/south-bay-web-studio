@@ -13,7 +13,7 @@ export default function Pricing({ heading = true }: { heading?: boolean }) {
             <p className="eyebrow mx-auto">Transparent pricing</p>
             <h2 className="mt-5 text-3xl font-extrabold tracking-tight sm:text-5xl">Pay once. Own it forever.</h2>
             <p className="mt-4 text-slate-600">
-              <strong className="text-slate-900">Zero Monthly Hosting Fees</strong>, on every plan.
+              <strong className="text-slate-900">Hosting included</strong> on every plan. Your domain name is the only yearly cost.
             </p>
           </Reveal>
         )}
@@ -38,7 +38,7 @@ export default function Pricing({ heading = true }: { heading?: boolean }) {
                 </p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   <p className="inline-flex w-fit items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
-                    <Icon name="shield" className="h-3.5 w-3.5" /> $0/month hosting fees
+                    <Icon name="shield" className="h-3.5 w-3.5" /> Hosting included
                   </p>
                   <p className="inline-flex w-fit items-center gap-1.5 rounded-full bg-slate-900 px-3 py-1 text-xs font-semibold text-white">
                     <Icon name="calendar" className="h-3.5 w-3.5" /> {p.delivery}
@@ -62,6 +62,25 @@ export default function Pricing({ heading = true }: { heading?: boolean }) {
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={100}>
+          <div className="glass mt-12 p-6 sm:p-10">
+            <h3 className="text-xl font-bold sm:text-2xl">What you pay for, in plain English</h3>
+            <div className="mt-6 grid gap-6 md:grid-cols-3">
+              {[
+                ["Your website design", "$300, $500 or $800, one time", "Paid to us. Covers the design, the build and your revision rounds."],
+                ["Web hosting", "Included, $0 per month", "Hosting is the computer that shows your site to visitors. Most agencies bill $50 to $150 a month for it. We include it."],
+                ["Your domain name", "About $10 to $20 per year", "Your address, like yourbusiness.com. You buy it from a registrar, it's in your name, and it renews yearly. Already own one? Nothing extra."],
+              ].map(([t, price, body]) => (
+                <div key={t} className="rounded-xl border border-slate-200 bg-white p-5">
+                  <p className="text-sm font-semibold text-slate-500">{t}</p>
+                  <p className="mt-1 text-lg font-bold text-slate-900">{price}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="max-w-sm">
           <Logo />
           <p className="mt-4 text-sm leading-relaxed text-slate-600">
-            Modern, mobile-first websites for small businesses across the South Bay. One-time pricing, zero monthly fees.
+            Modern, mobile-first websites for small businesses across the South Bay. One simple, one-time price with hosting included.
           </p>
         </div>
         <div className="text-sm">

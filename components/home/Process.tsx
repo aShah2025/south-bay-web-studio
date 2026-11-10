@@ -2,7 +2,7 @@ import Reveal from "../Reveal";
 
 const STEPS = [
   { n: "01", title: "Free preview", body: "Tell us about your business. We mock up your homepage at no cost." },
-  { n: "02", title: "Pick your tier", body: "Starter, Growth or Pro. One clear price, no monthly fees." },
+  { n: "02", title: "Pick your tier", body: "Starter, Growth or Pro. One clear price, paid once." },
   { n: "03", title: "Build & revise", body: "We build it mobile-first and refine it with your feedback." },
   { n: "04", title: "Launch & own it", body: "Your site goes live and it's yours. No lock-in." },
 ];

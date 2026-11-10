@@ -2,7 +2,7 @@ import Reveal from "./Reveal";
 
 const ROWS = [
   { label: "Upfront cost", them: "$2,500 – $5,000+", us: "$300 – $800 one-time" },
-  { label: "Hosting fees", them: "$50 – $150 / month", us: "$0 / month" },
+  { label: "Hosting fees", them: "$50 – $150 / month", us: "Included, $0 / month" },
   { label: "Turnaround", them: "6 – 10 weeks", us: "2 – 4 weeks" },
   { label: "Free preview", them: "No free preview", us: "Free live homepage preview before paying" },
 ];
@@ -72,6 +72,9 @@ export default function Comparison() {
           <p className="mx-auto mt-8 max-w-2xl text-center text-sm leading-relaxed text-slate-600 sm:text-base">
             <strong className="text-slate-900">How we keep prices low:</strong> we avoid bloated agency overhead and
             pass those savings directly to San Jose small businesses.
+          </p>
+          <p className="mx-auto mt-3 max-w-2xl text-center text-xs text-slate-500 sm:text-sm">
+            A domain name (about $10 – $20 a year) is paid to a registrar with any website, from any provider.
           </p>
         </Reveal>
       </div>

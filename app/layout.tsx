@@ -19,10 +19,10 @@ export const metadata: Metadata = {
     template: "%s | South Bay Web Studios",
   },
   description:
-    "Modern, mobile-first websites for San Jose small businesses. Fast turnaround, one-time pricing from $300, zero monthly fees.",
+    "Modern, mobile-first websites for San Jose small businesses. Fast turnaround and one-time pricing from $300, with hosting included.",
   openGraph: {
     title: "South Bay Web Studios",
-    description: "Modern websites for San Jose small businesses. Zero monthly fees.",
+    description: "Modern websites for San Jose small businesses. One simple, one-time price.",
     type: "website",
     locale: "en_US",
   },

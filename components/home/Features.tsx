@@ -3,7 +3,7 @@ import Spotlight from "../Spotlight";
 import Icon, { type IconName } from "../Icon";
 
 const FEATURES: { icon: IconName; title: string; body: string; span: string; hero?: boolean }[] = [
-  { icon: "dollar", title: "Zero monthly fees", body: "Pay one time. No hosting bills, no retainers, no surprise invoices. The site is yours to keep.", span: "md:col-span-2 md:row-span-2", hero: true },
+  { icon: "dollar", title: "One-time price", body: "Pay once for your website. No retainers and no surprise invoices. Hosting is included, and the only yearly cost is your domain name.", span: "md:col-span-2 md:row-span-2", hero: true },
   { icon: "phone", title: "Mobile-first", body: "Designed for the phone in your customer's hand, then scaled up beautifully.", span: "" },
   { icon: "bolt", title: "Blazing fast", body: "Lightweight static pages that load in a blink.", span: "" },
   { icon: "search", title: "Local SEO", body: "Be found by people searching in San Jose.", span: "" },
@@ -32,7 +32,7 @@ export default function Features() {
                 </span>
                 <h3 className={`mt-5 font-bold ${f.hero ? "text-3xl sm:text-4xl" : "text-lg"}`}>{f.title}</h3>
                 <p className={`mt-2 leading-relaxed ${f.hero ? "max-w-sm text-blue-100" : "text-sm text-slate-600"}`}>{f.body}</p>
-                {f.hero && <p className="mt-10 text-7xl font-extrabold tracking-tight text-white/90">$0<span className="text-2xl font-semibold text-blue-200">/mo</span></p>}
+                {f.hero && <p className="mt-10 text-7xl font-extrabold tracking-tight text-white/90">1×<span className="text-2xl font-semibold text-blue-200"> payment</span></p>}
               </Spotlight>
             </Reveal>
           ))}

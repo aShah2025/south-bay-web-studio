@@ -2,8 +2,16 @@ import Reveal from "./Reveal";
 
 const ITEMS = [
   {
-    q: "What does “zero monthly fees” mean?",
-    a: "You pay one price for your site and that's it. We build fast, static sites that don't need a monthly hosting plan, so there's no recurring bill from us. If you need a new domain name, that's a small yearly cost paid directly to the registrar.",
+    q: "Is there really no monthly fee?",
+    a: "You pay us one time. There's no monthly design, maintenance or retainer fee from us, and hosting is included. Two things are separate and normal for any website: your domain name (see below), and any paid third-party tools you choose to add later.",
+  },
+  {
+    q: "What is a domain name, and what does it cost?",
+    a: "A domain name is your website's address, like yourbusiness.com. You buy it from a domain registrar, it's registered in your name, and it renews every year, typically about $10 to $20 a year for a .com. If you already own your domain, there's nothing extra to buy.",
+  },
+  {
+    q: "What is web hosting?",
+    a: "Hosting is the computer that delivers your website to visitors. Many companies charge $50 to $150 a month for it. Your site is built so we can host it without a monthly hosting bill, so hosting is included in your one-time price.",
   },
   {
     q: "How long does it take?",

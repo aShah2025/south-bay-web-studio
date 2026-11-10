@@ -16,10 +16,10 @@ export default function Hero() {
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-blue-600" /> Proudly serving San Jose, CA
           </p>
           <h1 className="mt-6 text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-6xl">
-            Modern Websites for San Jose Small Businesses. <span className="gradient-text">Zero Monthly Fees.</span>
+            Modern Websites for San Jose Small Businesses. <span className="gradient-text">One Simple Price.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-slate-600 lg:mx-0">
-            Get a fast, mobile-first website live in weeks, not months. Pay once, own it forever. No hosting fees, no retainers, no surprises.
+            Get a fast, mobile-first website live in weeks, not months. Pay once for the design and own it. Hosting is included, and your domain name is the only yearly cost.
           </p>
           <div className="mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center lg:justify-start">
             <Link href="/contact/" className="btn-primary">Request Your Free Homepage Preview</Link>
@@ -46,7 +46,7 @@ export default function Hero() {
           </div>
           <div className="glass absolute -right-2 top-6 flex items-center gap-2 px-3 py-2 text-xs font-semibold shadow-xl sm:-right-6">
             <span className="grid h-7 w-7 place-items-center rounded-full bg-blue-600 text-white"><Icon name="dollar" className="h-4 w-4" /></span>
-            $0 / month hosting
+            Hosting included
           </div>
           <div className="glass absolute -left-2 top-1/2 hidden items-center gap-2 px-3 py-2 text-xs font-semibold shadow-xl sm:flex">
             <span className="grid h-7 w-7 place-items-center rounded-full bg-sky-500 text-white"><Icon name="phone" className="h-4 w-4" /></span>

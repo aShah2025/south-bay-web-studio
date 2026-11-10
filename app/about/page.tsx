@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const VALUES: { icon: IconName; title: string; body: string }[] = [
-  { icon: "dollar", title: "Fair, flat pricing", body: "One clear price per site. No monthly hosting fees, retainers or hidden add-ons." },
+  { icon: "dollar", title: "Fair, flat pricing", body: "One clear price per site. Hosting included, no retainers and no hidden add-ons." },
   { icon: "phone", title: "Mobile-first always", body: "Most local customers find you on their phone, so every site starts there." },
   { icon: "pin", title: "Local to the core", body: "We're a San Jose studio. We know the neighborhoods and how people here search." },
 ];
@@ -27,7 +27,7 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About the studio"
         title={<>A local studio for <span className="gradient-text">local businesses.</span></>}
-        subtitle="South Bay Web Studios builds fast, beautiful websites for San Jose small businesses, without the monthly bill."
+        subtitle="South Bay Web Studios builds fast, beautiful websites for San Jose small businesses, with one clear, one-time price."
       />
 
       <section className="pb-20 sm:pb-28">
@@ -43,8 +43,8 @@ export default function AboutPage() {
           <Reveal delay={120}>
             <div className="relative overflow-hidden rounded-3xl bg-slate-900 p-8 text-white sm:p-10">
               <div aria-hidden="true" className="absolute -right-10 -top-10 h-56 w-56 animate-blob rounded-full bg-blue-600/50 blur-3xl" />
-              <p className="relative text-6xl font-extrabold tracking-tight sm:text-7xl">$0<span className="text-2xl font-semibold text-sky-300"> / month</span></p>
-              <p className="relative mt-3 text-slate-300">Hosting fees on every plan. That&apos;s the whole idea.</p>
+              <p className="relative text-6xl font-extrabold tracking-tight sm:text-7xl">1×<span className="text-2xl font-semibold text-sky-300"> one-time price</span></p>
+              <p className="relative mt-3 text-slate-300">One simple price, with hosting included. We spell out exactly what you pay for.</p>
               <div className="relative mt-8 grid grid-cols-3 gap-3 text-center">
                 {[["3", "Simple tiers"], ["1×", "One-time price"], ["100%", "Mobile-first"]].map(([n, l]) => (
                   <div key={l} className="glass-dark p-3">

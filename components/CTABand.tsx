@@ -13,7 +13,7 @@ export default function CTABand() {
               See your homepage <span className="text-sky-400">before you pay a cent.</span>
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-slate-300">
-              Send us your business details and we&apos;ll mock up a free homepage preview. No obligation, no monthly fees.
+              Send us your business details and we&apos;ll mock up a free homepage preview. No obligation.
             </p>
             <Link href="/contact/" className="mt-9 inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5 text-sm font-bold text-slate-900 shadow-xl transition hover:-translate-y-0.5 hover:bg-sky-50">
               Request Your Free Homepage Preview →
