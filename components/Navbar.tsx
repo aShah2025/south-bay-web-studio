@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import Logo from "./Logo";
 
 const LINKS = [
+  { href: "/", label: "Home" },
   { href: "/work", label: "Work" },
   { href: "/pricing", label: "Pricing" },
   { href: "/about", label: "About" },
@@ -33,7 +34,7 @@ export default function Navbar() {
           {LINKS.map((l) => (
             <Link
               key={l.href}
-              href={`${l.href}/`}
+              href={l.href === "/" ? "/" : `${l.href}/`}
               aria-current={pathname === l.href ? "page" : undefined}
               className={`text-[15px] font-medium transition hover:text-blue-600 ${
                 pathname === l.href ? "text-blue-600" : "text-slate-700"
@@ -66,7 +67,7 @@ export default function Navbar() {
           <ul>
             {LINKS.map((l) => (
               <li key={l.href}>
-                <Link href={`${l.href}/`} className="flex min-h-12 items-center text-lg font-medium">
+                <Link href={l.href === "/" ? "/" : `${l.href}/`} className="flex min-h-12 items-center text-lg font-medium">
                   {l.label}
                 </Link>
               </li>
