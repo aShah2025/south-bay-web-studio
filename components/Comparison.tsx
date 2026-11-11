@@ -7,11 +7,11 @@ const ROWS = [
 
 function Mark({ good }: { good: boolean }) {
   return good ? (
-    <svg className="h-5 w-5 shrink-0 text-blue-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+    <svg className="h-5 w-5 shrink-0 text-ink" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
       <path fillRule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-7.5 7.5a1 1 0 01-1.4 0L3.3 9.7a1 1 0 011.4-1.4l3.8 3.8 6.8-6.8a1 1 0 011.4 0z" clipRule="evenodd" />
     </svg>
   ) : (
-    <svg className="h-5 w-5 shrink-0 text-slate-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+    <svg className="h-5 w-5 shrink-0 text-muted/50" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
       <path d="M6.3 5l3.7 3.7L13.7 5 15 6.3 11.3 10l3.7 3.7-1.3 1.3L10 11.3 6.3 15 5 13.7 8.7 10 5 6.3 6.3 5z" />
     </svg>
   );
@@ -19,31 +19,31 @@ function Mark({ good }: { good: boolean }) {
 
 export default function Comparison() {
   return (
-    <section className="section bg-slate-50">
+    <section className="section bg-sand">
       <div className="container-x max-w-4xl">
         <div className="text-center">
-          <h2 className="text-3xl sm:text-4xl">Why Choose Us vs. Traditional Agencies</h2>
+          <h2 className="text-3xl">Why Choose Us vs. Traditional Agencies</h2>
         </div>
 
         <div className="card mt-12 overflow-hidden">
           <table className="w-full table-fixed text-left text-sm sm:text-base">
             <caption className="sr-only">Comparison of traditional agencies and South Bay Web Studios</caption>
             <thead>
-              <tr className="border-b border-slate-200">
+              <tr className="border-b border-line">
                 <th scope="col" className="w-[26%] p-3 sm:p-5"><span className="sr-only">Feature</span></th>
-                <th scope="col" className="p-3 text-center text-xs font-semibold text-slate-500 sm:p-5 sm:text-sm">Traditional Agencies</th>
-                <th scope="col" className="bg-blue-600 p-3 text-center text-xs font-bold text-white sm:p-5 sm:text-sm">South Bay Web Studios</th>
+                <th scope="col" className="p-3 text-center text-xs font-semibold text-muted sm:p-5 sm:text-sm">Traditional Agencies</th>
+                <th scope="col" className="bg-charcoal p-3 text-center text-xs font-bold text-surface sm:p-5 sm:text-sm">South Bay Web Studios</th>
               </tr>
             </thead>
             <tbody>
               {ROWS.map((r) => (
-                <tr key={r.label} className="border-b border-slate-100 last:border-0">
-                  <th scope="row" className="p-3 text-xs font-semibold text-slate-900 sm:p-5 sm:text-sm">{r.label}</th>
+                <tr key={r.label} className="border-b border-line last:border-0">
+                  <th scope="row" className="p-3 text-xs font-semibold text-ink sm:p-5 sm:text-sm">{r.label}</th>
                   <td className="p-3 sm:p-5">
-                    <span className="flex items-center justify-center gap-2 text-center text-slate-500"><Mark good={false} /><span>{r.them}</span></span>
+                    <span className="flex items-center justify-center gap-2 text-center text-muted"><Mark good={false} /><span>{r.them}</span></span>
                   </td>
-                  <td className="bg-blue-50/70 p-3 sm:p-5">
-                    <span className="flex items-center justify-center gap-2 text-center font-semibold text-slate-900"><Mark good /><span>{r.us}</span></span>
+                  <td className="bg-sand p-3 sm:p-5">
+                    <span className="flex items-center justify-center gap-2 text-center font-semibold text-ink"><Mark good /><span>{r.us}</span></span>
                   </td>
                 </tr>
               ))}
@@ -51,10 +51,10 @@ export default function Comparison() {
           </table>
         </div>
 
-        <p className="mx-auto mt-8 max-w-2xl text-center text-slate-600">
-          <strong className="text-slate-900">How we keep prices low:</strong> we avoid bloated agency overhead and pass those savings directly to San Jose small businesses.
+        <p className="mx-auto mt-8 max-w-2xl text-center text-muted">
+          <strong className="text-ink">How we keep prices low:</strong> we avoid bloated agency overhead and pass those savings directly to San Jose small businesses.
         </p>
-        <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-slate-500">
+        <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted">
           A domain name (about $10 – $20 a year) is paid to a registrar with any website, from any provider.
         </p>
       </div>

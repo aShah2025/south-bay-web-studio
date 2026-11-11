@@ -6,18 +6,18 @@ const STEPS = [
 
 export default function HowItWorks() {
   return (
-    <section className="section bg-slate-50">
+    <section className="section bg-sand">
       <div className="container-x">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl sm:text-4xl">How it works</h2>
-          <p className="mt-4 text-lg text-slate-600">Three simple steps from hello to live.</p>
+          <h2 className="text-3xl">How it works</h2>
+          <p className="mt-4 text-lg text-muted">Three simple steps from hello to live.</p>
         </div>
         <ol className="mt-12 grid gap-6 md:grid-cols-3">
           {STEPS.map((s, i) => (
             <li key={s.title} className="card p-7">
-              <span className="grid h-10 w-10 place-items-center rounded-full bg-blue-600 text-base font-bold text-white">{i + 1}</span>
+              <span className="grid h-10 w-10 place-items-center rounded-md bg-charcoal text-base font-bold text-surface">{i + 1}</span>
               <h3 className="mt-5 text-xl">{s.title}</h3>
-              <p className="mt-2 text-[15px] text-slate-600">{s.body}</p>
+              <p className="mt-2 text-[15px] text-muted">{s.body}</p>
             </li>
           ))}
         </ol>

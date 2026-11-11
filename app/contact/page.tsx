@@ -26,15 +26,15 @@ export default function ContactPage() {
         <div className="container-x grid gap-8 lg:grid-cols-[1.3fr_1fr] lg:gap-12">
           <ContactForm />
           <div className="space-y-5">
-            <div className="card bg-slate-50 p-7 sm:p-8">
+            <div className="card bg-sand p-7 sm:p-8">
               <h2 className="text-2xl">What happens next</h2>
               <ol className="mt-6 space-y-5">
                 {NEXT.map((n, i) => (
                   <li key={n.title} className="flex gap-4">
-                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-blue-600 text-sm font-bold text-white">{i + 1}</span>
+                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-charcoal text-sm font-bold text-surface">{i + 1}</span>
                     <div>
                       <p className="font-semibold">{n.title}</p>
-                      <p className="mt-0.5 text-[15px] text-slate-600">{n.body}</p>
+                      <p className="mt-0.5 text-[15px] text-muted">{n.body}</p>
                     </div>
                   </li>
                 ))}
@@ -42,8 +42,8 @@ export default function ContactPage() {
             </div>
             <div className="card p-6 text-[15px]">
               <p className="font-semibold">Prefer email?</p>
-              <p className="mt-1"><a className="text-blue-600 hover:underline" href={`mailto:${SITE.email}`}>{SITE.email}</a></p>
-              <p className="mt-3 text-slate-600">{SITE.location}</p>
+              <p className="mt-1"><a className="text-ink hover:underline" href={`mailto:${SITE.email}`}>{SITE.email}</a></p>
+              <p className="mt-3 text-muted">{SITE.location}</p>
             </div>
           </div>
         </div>

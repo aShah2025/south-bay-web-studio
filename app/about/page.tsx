@@ -31,22 +31,22 @@ export default function AboutPage() {
       <section className="section">
         <div className="container-x grid items-start gap-10 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
           <div>
-            <h2 className="text-3xl sm:text-4xl">Why we do it differently</h2>
-            <div className="mt-6 space-y-4 text-lg text-slate-600">
+            <h2 className="text-3xl">Why we do it differently</h2>
+            <div className="mt-6 space-y-4 text-lg text-muted">
               <p>Too many small businesses pay every month for a simple website. We think a good local site should be a one-time purchase that you own.</p>
               <p>So we build fast, lightweight, mobile-first sites and price them clearly: $300, $500 or $800. When it&apos;s done, it&apos;s yours.</p>
               <p>And before you spend anything, we&apos;ll mock up your homepage for free so you can see it on your own business.</p>
             </div>
           </div>
           <div className="card p-8">
-            <p className="text-6xl font-bold tracking-tight text-blue-600">1×</p>
+            <p className="text-6xl font-bold tracking-tight text-ink">1×</p>
             <p className="mt-2 text-lg font-semibold">One-time price</p>
-            <p className="mt-2 text-[15px] text-slate-600">Hosting included. We spell out exactly what you pay for, including your yearly domain name.</p>
+            <p className="mt-2 text-[15px] text-muted">Hosting included. We spell out exactly what you pay for, including your yearly domain name.</p>
             <dl className="mt-6 grid grid-cols-2 gap-3 text-center">
               {[["3", "Simple plans"], ["2–4", "Weeks to deliver"]].map(([n, l]) => (
-                <div key={l} className="rounded-xl bg-slate-50 p-4">
+                <div key={l} className="rounded-xl bg-sand p-4">
                   <dt className="text-2xl font-bold">{n}</dt>
-                  <dd className="mt-1 text-sm text-slate-500">{l}</dd>
+                  <dd className="mt-1 text-sm text-muted">{l}</dd>
                 </div>
               ))}
             </dl>
@@ -54,15 +54,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section bg-slate-50">
+      <section className="section bg-sand">
         <div className="container-x">
-          <h2 className="text-center text-3xl sm:text-4xl">What we stand for</h2>
+          <h2 className="text-center">What we stand for</h2>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {VALUES.map((v) => (
               <div key={v.title} className="card p-7">
-                <span className="grid h-12 w-12 place-items-center rounded-xl bg-blue-600 text-white"><Icon name={v.icon} /></span>
+                <span className="grid h-12 w-12 place-items-center rounded-xl bg-charcoal text-surface"><Icon name={v.icon} /></span>
                 <h3 className="mt-5 text-xl">{v.title}</h3>
-                <p className="mt-2 text-[15px] text-slate-600">{v.body}</p>
+                <p className="mt-2 text-[15px] text-muted">{v.body}</p>
               </div>
             ))}
           </div>
@@ -71,11 +71,11 @@ export default function AboutPage() {
 
       <section className="section">
         <div className="container-x max-w-4xl text-center">
-          <h2 className="text-3xl sm:text-4xl">Proudly serving the South Bay</h2>
+          <h2 className="text-3xl">Proudly serving the South Bay</h2>
           <ul className="mt-10 flex flex-wrap justify-center gap-3">
             {AREAS.map((a) => (
-              <li key={a} className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-4 py-2 text-[15px] font-medium shadow-sm">
-                <Icon name="pin" className="h-4 w-4 text-blue-600" /> {a}
+              <li key={a} className="inline-flex items-center gap-1.5 rounded-full border border-line bg-surface px-4 py-2 text-[15px] font-medium shadow-sm">
+                <Icon name="pin" className="h-4 w-4 text-ink" /> {a}
               </li>
             ))}
           </ul>

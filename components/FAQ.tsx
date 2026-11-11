@@ -18,7 +18,7 @@ const ITEMS = [
   },
   {
     q: "Which plan should I choose?",
-    a: "Starter is perfect if you just need a polished, mobile-friendly page with your phone number and hours. Growth adds Home, About and Contact pages with a lead form and local SEO. Pro adds online booking, Google Reviews and 30 days of free edits.",
+    a: "Starter is a single, polished page with tap-to-call, your hours and a map, perfect if you just need to be found and called. Growth adds Home, About and Contact pages, a quote-request form, a photo gallery and local San Jose SEO, so your site starts bringing in leads. Pro adds online booking, a Google Reviews showcase, an FAQ and 30 days of free edits.",
   },
   {
     q: "Do I own my website?",
@@ -37,23 +37,23 @@ const ITEMS = [
 export default function FAQ({ limit }: { limit?: number }) {
   const items = limit ? ITEMS.slice(0, limit) : ITEMS;
   return (
-    <section className="section bg-slate-50">
+    <section className="section bg-sand">
       <div className="container-x max-w-3xl">
         <div className="text-center">
-          <h2 className="text-3xl sm:text-4xl">Questions, answered</h2>
+          <h2 className="text-3xl">Questions, answered</h2>
         </div>
         <div className="mt-12 space-y-3">
           {items.map((it) => (
             <details key={it.q} className="card group p-5 open:shadow-md">
               <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 text-[17px] font-semibold">
                 {it.q}
-                <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-blue-50 text-blue-600 transition group-open:rotate-45" aria-hidden="true">
+                <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-sand text-ink transition group-open:rotate-45" aria-hidden="true">
                   <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
                     <path d="M12 5v14M5 12h14" />
                   </svg>
                 </span>
               </summary>
-              <p className="mt-2 pb-1 text-[15px] text-slate-600">{it.a}</p>
+              <p className="mt-2 pb-1 text-[15px] text-muted">{it.a}</p>
             </details>
           ))}
         </div>

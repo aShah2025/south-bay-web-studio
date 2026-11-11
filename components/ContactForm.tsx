@@ -6,7 +6,7 @@ import { SITE } from "@/lib/site";
 type Status = "idle" | "sending" | "success" | "error";
 
 const inputClass =
-  "mt-1.5 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-900 placeholder:text-slate-400 transition focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600/30";
+  "mt-1.5 block w-full rounded-xl border border-[#c3c7bb] bg-surface px-4 py-3 text-base text-ink placeholder:text-muted/60 transition focus:border-ink focus:outline-none focus:ring-2 focus:ring-ink/20";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -64,7 +64,7 @@ export default function ContactForm() {
         </label>
       </div>
       <label className="block text-[15px] font-semibold">
-        Current Website <span className="font-normal text-slate-500">(optional)</span>
+        Current Website <span className="font-normal text-muted">(optional)</span>
         <input name="current_website" type="url" autoComplete="url" className={inputClass} placeholder="https://" />
       </label>
 
@@ -74,10 +74,10 @@ export default function ContactForm() {
 
       <div aria-live="polite" className="min-h-6 text-center text-sm">
         {status === "success" && (
-          <p className="font-medium text-green-700">Thanks! We&apos;ll be in touch within one business day.</p>
+          <p className="font-medium text-[#2f6b3a]">Thanks! We&apos;ll be in touch within one business day.</p>
         )}
         {status === "error" && (
-          <p className="font-medium text-red-700">Something went wrong. Please try again or email {SITE.email}.</p>
+          <p className="font-medium text-[#a3342b]">Something went wrong. Please try again or email {SITE.email}.</p>
         )}
       </div>
     </form>

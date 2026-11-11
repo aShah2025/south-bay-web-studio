@@ -20,7 +20,7 @@ export default function StickyCTA() {
 
   return (
     <div
-      className={`fixed inset-x-0 bottom-0 z-40 border-t border-slate-200 bg-white/95 px-4 py-3 shadow-[0_-4px_20px_rgba(15,23,42,0.08)] backdrop-blur transition-transform duration-300 md:hidden ${
+      className={`fixed inset-x-0 bottom-0 z-40 border-t border-line bg-surface/95 px-4 py-3 shadow-[0_-4px_20px_rgba(15,23,42,0.08)] backdrop-blur transition-transform duration-300 md:hidden ${
         show ? "translate-y-0" : "translate-y-full"
       }`}
       aria-hidden={!show}
